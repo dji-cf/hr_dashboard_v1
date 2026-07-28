@@ -1,0 +1,11 @@
+# Local Streamlit secrets - NEVER commit
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.pyc
+venv/
+.uv/
+uv.lock
+.claude
+.snowflake

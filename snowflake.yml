@@ -1,0 +1,15 @@
+definition_version: 2
+entities:
+  hr_metrics_v1:
+    type: streamlit
+    identifier:
+      name: HR_METRICS_V1
+      database: CORP_CORE_DEV
+      schema: FCT_PER
+    title: "Fanatics Collectibles - HR Metrics (V1)"
+    query_warehouse: ANALYTICS_WAREHOUSE
+    runtime_name: SYSTEM$ST_CONTAINER_RUNTIME_PY3_11
+    compute_pool: SYSTEM_COMPUTE_POOL_CPU
+    main_file: streamlit_app.py
+    artifacts:
+      - streamlit_app.py

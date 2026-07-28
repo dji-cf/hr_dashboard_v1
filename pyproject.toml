@@ -1,0 +1,12 @@
+[project]
+name = "hr-metrics-v1"
+version = "0.1.0"
+description = "Fanatics Collectibles - HR Metrics (V1) Streamlit-in-Snowflake app"
+requires-python = ">=3.11"
+dependencies = [
+    "snowflake-connector-python>=3.3.0",
+    "streamlit[snowflake]>=1.55.0",
+    "altair>=5.5.0",
+    "pandas>=2.2.3",
+    "numpy>=1.26.0",
+]
