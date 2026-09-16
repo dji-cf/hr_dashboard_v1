@@ -67,9 +67,13 @@ def category_labels(s: pd.Series) -> pd.Series:
 # so we fall back to an owner connection locally (masked data, UI validation only).
 
 
-conn = st.connection("snowflake-callers-rights")
+try:
+    conn = st.connection("snowflake-callers-rights")
+    IS_CALLERS = True
+except Exception:
+    conn = st.connection("snowflake")
+    IS_CALLERS = False
 CONN = conn
-IS_CALLERS = True
 
 
 # =============================================================================
