@@ -9,3 +9,6 @@ venv/
 uv.lock
 .claude
 .snowflake
+*.egg-info/
+.venv/
+.DS_Store
