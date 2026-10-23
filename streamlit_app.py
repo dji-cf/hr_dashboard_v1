@@ -21,8 +21,11 @@ import pandas as pd
 import altair as alt
 import streamlit as st
 
+# Pre-production marker; remove at go-live (blank to "" turns off all DRAFT labels).
+DRAFT_LABEL = "(DRAFT)"
+
 st.set_page_config(
-    page_title="Fanatics Collectibles - HR Metrics (V1)",
+    page_title=(f"{DRAFT_LABEL.strip('()')} — " if DRAFT_LABEL else "") + "Fanatics Collectibles - HR Metrics (V1)",
     page_icon=":material/groups:",
     layout="wide",
 )
@@ -360,7 +363,7 @@ def render_header():
     with st.container(
         horizontal=True, horizontal_alignment="distribute", vertical_alignment="center"
     ):
-        st.markdown("# :material/groups: Fanatics Collectibles - HR Metrics (V1)")
+        st.markdown(f"# :material/groups: {DRAFT_LABEL + ' ' if DRAFT_LABEL else ''}Fanatics Collectibles - HR Metrics (V1)")
         if st.button(":material/restart_alt: Reset", type="tertiary"):
             st.session_state.clear()
             st.rerun()
